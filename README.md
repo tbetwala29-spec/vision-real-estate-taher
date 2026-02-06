@@ -7,13 +7,6 @@
   <strong style="color: #34495e; font-size: 1.1em;">Real Estate Professional & Entrepreneur | Dubai, UAE</strong><br>
   <em style="color: #7d6608; font-size: 1em;">Connecting Dreams with Properties Through Trust and Expertise</em>
 </p>
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-Active%20Investor-brightgreen" alt="Status">
-  <img src="https://img.shields.io/badge/Visa-UAE%20Investor-blue" alt="Visa">
-  <img src="https://img.shields.io/badge/License-UAE%20LMV%20Driver-orange" alt="Driver License">
-</div>
-
 ---
 
 ## 📊 **Professional Snapshot**
@@ -115,42 +108,30 @@
 
 ---
 
-## 📞 **Contact & Connection**
+## 📞 **Contact Information**
 
-<table style="width: 100%;">
-  <tr>
-    <td style="width: 50%; vertical-align: top;">
-      <h4 style="color: #1a5276;">📱 Direct Contact</h4>
-      <table>
-        <tr>
-          <td><strong>Phone:</strong></td>
-          <td>+971 58 113 0453</td>
-        </tr>
-        <tr>
-          <td><strong>WhatsApp:</strong></td>
-          <td>+971 52 179 0412</td>
-        </tr>
-        <tr>
-          <td><strong>Email:</strong></td>
-          <td>tbetwala29@gmail.com</td>
-        </tr>
-        <tr>
-          <td><strong>Location:</strong></td>
-          <td>Dubai, UAE</td>
-        </tr>
-      </table>
-    </td>
-    <td style="width: 50%; vertical-align: top;">
-      <h4 style="color: #1a5276;">🔗 Professional Links</h4>
-      <ul>
-        <li><a href="[YOUR_LINKEDIN_URL]">LinkedIn Profile</a></li>
-        <li><a href="[YOUR_INSTAGRAM_URL]">Professional Instagram</a></li>
-        <li><a href="[YOUR_PORTFOLIO_URL]">Property Portfolio</a></li>
-      </ul>
-      <p><em>Replace bracketed links with your actual URLs</em></p>
-    </td>
-  </tr>
-</table>
+<div style="background: #f0f7ff; padding: 25px; border-radius: 10px; text-align: center;">
+  <h3 style="color: #1a5276; margin-top: 0;">📱 Direct Contact Details</h3>
+  
+  <table style="width: 100%; max-width: 500px; margin: 0 auto;">
+    <tr>
+      <td style="text-align: right; padding: 8px; width: 40%;"><strong>Phone:</strong></td>
+      <td style="text-align: left; padding: 8px; width: 60%;">+971 58 113 0453</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;"><strong>WhatsApp:</strong></td>
+      <td style="text-align: left; padding: 8px;">+971 52 179 0412</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;"><strong>Email:</strong></td>
+      <td style="text-align: left; padding: 8px;">tbetwala29@gmail.com</td>
+    </tr>
+    <tr>
+      <td style="text-align: right; padding: 8px;"><strong>Location:</strong></td>
+      <td style="text-align: left; padding: 8px;">Dubai, UAE</td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -209,5 +190,5 @@
 
 <footer align="center" style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee; color: #666;">
   <p><strong>Last Updated:</strong> February 2024 | <strong>Repository:</strong> Professional Real Estate Profile</p>
-  <p>🌟 <strong>Let's connect and explore opportunities in Dubai's vibrant property market!</strong> 🌟</p>
+  <p>🌟 <strong>Available for real estate opportunities in Dubai's vibrant property market!</strong> 🌟</p>
 </footer>
