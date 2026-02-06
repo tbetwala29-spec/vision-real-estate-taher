@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taher - Real Estate Sales Executive</title>
+    <title>Taher Betwala | Real Estate Professional - Dubai</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Taher.jpg">
     <style>
         :root {
             --primary: #3a506b;
@@ -636,12 +638,12 @@
                 <div class="profile-section">
                     <div class="profile-img-container">
                         <!-- Using the provided image from GitHub -->
-                        <img src="Taher.jpg" alt="Taher - Real Estate Professional" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80'">
+                        <img src="Taher.jpg" alt="Taher Betwala - Real Estate Professional in Dubai" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80'">
                     </div>
                     <div class="profile-text">
                         <h1 class="name">Taher Betwala</h1>
-                        <div class="title">Real Estate Sales Executive</div>
-                        <div class="visa-badge">Visa Status: Partner</div>
+                        <div class="title">Real Estate Sales Executive | Dubai UAE</div>
+                        <div class="visa-badge">Visa Status: PArtner</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
@@ -667,10 +669,10 @@
                             <a href="tel:+971581130453" class="btn btn-call">
                                 <i class="fas fa-phone-alt"></i> Call Now
                             </a>
-                            <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities" target="_blank" class="btn btn-whatsapp">
+                            <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities%20in%20Dubai" target="_blank" class="btn btn-whatsapp">
                                 <i class="fab fa-whatsapp"></i> WhatsApp
                             </a>
-                            <a href="mailto:tbetwala29@gmail.com" class="btn btn-email">
+                            <a href="mailto:tbetwala29@gmail.com?subject=Real Estate Inquiry from Portfolio" class="btn btn-email">
                                 <i class="fas fa-envelope"></i> Email
                             </a>
                         </div>
@@ -688,7 +690,7 @@
         </section>
 
         <!-- Core Competencies -->
-        <section class="fade-in">
+        <section class="fade-in" id="languages">
             <h2 class="section-title"><i class="fas fa-star"></i> CORE COMPETENCIES</h2>
             <div class="competencies-grid">
                 <div class="competency-item">
@@ -705,7 +707,7 @@
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-cogs"></i> Operational Excellence</h3>
-                    <p>Full-cycle business management, from sourcing to final delivery, with a systematic approach.</p>
+                    <p>Full-cycle business management, from sourcing to final delivery with systematic approach.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-hands-helping"></i> Community Leadership</h3>
@@ -836,7 +838,7 @@
                 <a href="tel:+971581130453" class="btn btn-call">
                     <i class="fas fa-phone-alt"></i> Call +971 58 113 0453
                 </a>
-                <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities" target="_blank" class="btn btn-whatsapp">
+                <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities%20in%20Dubai" target="_blank" class="btn btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> WhatsApp Me
                 </a>
             </div>
@@ -889,6 +891,25 @@
                     }
                 });
             });
+            
+            // Clear any cached content
+            if (window.performance && window.performance.navigation.type === 1) {
+                // Page was reloaded
+                window.location.hash = '';
+            }
+        });
+        
+        // Prevent default behavior for hash links
+        window.addEventListener('hashchange', function() {
+            if (window.location.hash === '#languages') {
+                const languagesSection = document.getElementById('languages');
+                if (languagesSection) {
+                    window.scrollTo({
+                        top: languagesSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
         });
     </script>
 </body>
