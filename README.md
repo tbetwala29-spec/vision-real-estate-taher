@@ -1,21 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taher - Real Estate Sales Executive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #e74c3c;
-            --accent: #3498db;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --highlight: #f39c12;
-            --bg-gradient: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --primary: #3a506b;
+            --secondary: #5bc0be;
+            --accent: #6fffe9;
+            --light: #f8f9fa;
+            --dark: #1c2541;
+            --highlight: #ff9f1c;
+            --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
+            --gold: #d4af37;
+            --sand: #f5e8c8;
         }
 
         * {
@@ -27,9 +30,11 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #444;
+            background-color: #fefefe;
             overflow-x: hidden;
+            background-image: radial-gradient(#e9ecef 1px, transparent 1px);
+            background-size: 20px 20px;
         }
 
         .container {
@@ -41,15 +46,15 @@
 
         /* Header Styles */
         header {
-            background: var(--bg-gradient);
-            color: white;
-            padding: 30px 0;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            box-shadow: var(--card-shadow);
+            background: white;
+            color: var(--dark);
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
             margin-bottom: 40px;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border-radius: 0 0 15px 15px;
         }
 
         .header-content {
@@ -63,22 +68,37 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 40px;
+            width: 100%;
         }
 
         .profile-img-container {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
+            border: 6px solid white;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .profile-img-container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-img-container::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent));
+            border-radius: 50%;
+            z-index: -1;
         }
 
         .profile-img {
@@ -93,68 +113,146 @@
         }
 
         .name {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 5px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: var(--dark);
+            background: linear-gradient(90deg, var(--dark), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .title {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 500;
             margin-bottom: 15px;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--highlight);
         }
 
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 15px;
+            gap: 15px;
+            margin-top: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             font-size: 0.95rem;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 8px 15px;
-            border-radius: 30px;
-            backdrop-filter: blur(5px);
+            background: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             transition: var(--transition);
+            border: 1px solid #eee;
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.25);
+            background: #f8f9fa;
             transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
         }
 
         .contact-item i {
-            color: var(--highlight);
+            color: var(--secondary);
         }
 
         .visa-badge {
             display: inline-block;
-            background-color: var(--highlight);
+            background-color: var(--sand);
             color: var(--dark);
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 8px 20px;
+            border-radius: 8px;
             font-weight: 600;
             font-size: 0.9rem;
             margin-top: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--gold);
+        }
+
+        /* Call to Action Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-call {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-call:hover {
+            background: linear-gradient(to right, #128C7E, #25D366);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(to right, #34B7F1, #25D366);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(to right, #25D366, #34B7F1);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-email {
+            background: linear-gradient(to right, var(--primary), var(--dark));
+            color: white;
+            box-shadow: 0 4px 15px rgba(58, 80, 107, 0.2);
+        }
+
+        .btn-email:hover {
+            background: linear-gradient(to right, var(--dark), var(--primary));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(58, 80, 107, 0.3);
         }
 
         /* Section Styles */
         section {
             background: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 30px;
             box-shadow: var(--card-shadow);
             transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
         section:hover {
@@ -163,18 +261,29 @@
         }
 
         .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
             color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--sand);
             display: inline-block;
+            position: relative;
         }
 
         .section-title i {
             margin-right: 10px;
             color: var(--secondary);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 70px;
+            height: 2px;
+            background-color: var(--highlight);
         }
 
         /* Professional Summary */
@@ -187,6 +296,9 @@
         .highlight {
             color: var(--secondary);
             font-weight: 600;
+            background-color: rgba(91, 192, 190, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
         }
 
         /* Core Competencies */
@@ -197,16 +309,18 @@
         }
 
         .competency-item {
-            background: linear-gradient(to right, #f8f9fa, #e9ecef);
-            padding: 20px;
+            background: white;
+            padding: 22px;
             border-radius: 10px;
-            border-left: 5px solid var(--accent);
+            border-left: 5px solid var(--secondary);
             transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f0f0f0;
         }
 
         .competency-item:hover {
-            background: linear-gradient(to right, #e9ecef, #dee2e6);
-            border-left-color: var(--secondary);
+            border-left-color: var(--highlight);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
         .competency-item h3 {
@@ -220,17 +334,32 @@
 
         .competency-item h3 i {
             color: var(--secondary);
+            width: 24px;
+            text-align: center;
         }
 
         /* Experience */
         .experience-item {
             margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #ddd;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            position: relative;
         }
 
         .experience-item:last-child {
             border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
         }
 
         .exp-header {
@@ -247,11 +376,12 @@
         }
 
         .period {
-            background-color: var(--primary);
-            color: white;
-            padding: 5px 15px;
+            background-color: var(--sand);
+            color: var(--dark);
+            padding: 6px 18px;
             border-radius: 20px;
             font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .role {
@@ -259,6 +389,7 @@
             color: var(--secondary);
             margin-bottom: 15px;
             font-style: italic;
+            font-weight: 500;
         }
 
         .responsibilities {
@@ -266,17 +397,18 @@
         }
 
         .responsibilities li {
-            margin-bottom: 10px;
-            padding-left: 25px;
+            margin-bottom: 12px;
+            padding-left: 28px;
             position: relative;
         }
 
         .responsibilities li:before {
             content: "▸";
             color: var(--accent);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             position: absolute;
             left: 0;
+            font-weight: bold;
         }
 
         /* Community & Education */
@@ -292,9 +424,16 @@
         }
 
         .education-item {
-            background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
-            padding: 20px;
+            background: white;
+            padding: 22px;
             border-radius: 10px;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: var(--transition);
+        }
+
+        .education-item:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
         /* Personal Details */
@@ -308,20 +447,23 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            padding: 15px;
-            background: #f8f9fa;
+            padding: 18px;
+            background: white;
             border-radius: 10px;
             transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f0f0f0;
         }
 
         .detail-item:hover {
-            background: #e9ecef;
             transform: translateX(5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--secondary);
         }
 
         .detail-item i {
-            font-size: 1.5rem;
-            color: var(--accent);
+            font-size: 1.6rem;
+            color: var(--secondary);
             width: 40px;
             text-align: center;
         }
@@ -329,41 +471,69 @@
         .detail-label {
             font-weight: 600;
             color: var(--primary);
+            margin-bottom: 5px;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 40px 0;
             margin-top: 40px;
-            background: var(--primary);
+            background: linear-gradient(to right, var(--primary), var(--dark));
             color: white;
             border-radius: 15px 15px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--accent), var(--highlight));
         }
 
         .footer-text {
-            font-size: 0.9rem;
-            opacity: 0.8;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 10px;
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
+        @media (max-width: 992px) {
             .profile-section {
                 flex-direction: column;
                 text-align: center;
             }
-
+            
+            .profile-text {
+                text-align: center;
+            }
+            
+            .title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             .contact-info {
                 justify-content: center;
             }
+            
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
 
             .name {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .title {
@@ -371,7 +541,7 @@
             }
 
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
             .exp-header {
@@ -382,16 +552,21 @@
             .period {
                 align-self: flex-start;
             }
+            
+            .profile-img-container {
+                width: 170px;
+                height: 170px;
+            }
+            
+            section {
+                padding: 25px;
+            }
         }
 
         @media (max-width: 480px) {
             .container {
                 width: 95%;
-                padding: 10px;
-            }
-
-            section {
-                padding: 20px;
+                padding: 15px;
             }
 
             .competencies-grid {
@@ -401,6 +576,15 @@
             .profile-img-container {
                 width: 150px;
                 height: 150px;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
             }
         }
 
@@ -413,9 +597,39 @@
         .fade-in {
             animation: fadeIn 0.8s ease forwards;
         }
+        
+        /* Floating elements */
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .floating-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            right: 5%;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            opacity: 0.2;
+        }
+        
+        .floating-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 10%;
+            left: 5%;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            opacity: 0.1;
+        }
     </style>
 </head>
 <body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    
     <div class="container">
         <!-- Header with Profile -->
         <header class="fade-in">
@@ -448,6 +662,19 @@
                                 <span>tbetwala29@gmail.com</span>
                             </div>
                         </div>
+                        
+                        <!-- Call to Action Buttons -->
+                        <div class="cta-buttons">
+                            <a href="tel:+971581130453" class="btn btn-call">
+                                <i class="fas fa-phone-alt"></i> Call Now
+                            </a>
+                            <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities" target="_blank" class="btn btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="mailto:tbetwala29@gmail.com" class="btn btn-email">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -467,27 +694,27 @@
             <div class="competencies-grid">
                 <div class="competency-item">
                     <h3><i class="fas fa-handshake"></i> Sales & Negotiation</h3>
-                    <p>Expert at closing deals and managing pricing discussions.</p>
+                    <p>Highly proficient at closing deals and managing pricing discussions with a collaborative approach.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-users"></i> Relationship Management</h3>
-                    <p>Built a loyal client base through trust and transparency.</p>
+                    <p>Built a loyal client base through trust and transparency with long-term relationship focus.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-map-marked-alt"></i> Local Market Knowledge</h3>
-                    <p>Deep understanding of Dubai's business landscape and residential areas.</p>
+                    <p>Deep understanding of Dubai's business landscape and residential areas with on-ground experience.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-cogs"></i> Operational Excellence</h3>
-                    <p>Full-cycle business management, from sourcing to final delivery.</p>
+                    <p>Full-cycle business management, from sourcing to final delivery with systematic approach.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-hands-helping"></i> Community Leadership</h3>
-                    <p>Respected social worker with strong networking capabilities.</p>
+                    <p>Respected social worker with strong networking capabilities and community trust.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-language"></i> Languages</h3>
-                    <p>Fluent in English, Hindi, and Urdu.</p>
+                    <p>Fluent in English, Hindi, and Urdu for effective multicultural communication.</p>
                 </div>
             </div>
         </section>
@@ -606,6 +833,14 @@
         <footer class="fade-in">
             <p>© <span id="currentYear"></span> Taher Betwala - Real Estate Sales Executive</p>
             <p class="footer-text">Dubai, UAE | Ready to contribute to your real estate success</p>
+            <div class="cta-buttons" style="margin-top: 25px; justify-content: center;">
+                <a href="tel:+971581130453" class="btn btn-call">
+                    <i class="fas fa-phone-alt"></i> Call +971 58 113 0453
+                </a>
+                <a href="https://wa.me/971581130453?text=Hi%20Taher,%20I'm%20interested%20in%20discussing%20real%20estate%20opportunities" target="_blank" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
+            </div>
         </footer>
     </div>
 
@@ -639,6 +874,22 @@
             // Check on scroll and load
             window.addEventListener('scroll', fadeInOnScroll);
             fadeInOnScroll(); // Run on initial load
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>
