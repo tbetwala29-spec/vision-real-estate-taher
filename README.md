@@ -1,104 +1,119 @@
-<div align="center">
-  <!-- REPLACE 'your-image.jpg' WITH YOUR ACTUAL IMAGE FILENAME -->
-  <img src="your-Taher.jpg" width="200" style="border-radius: 50%; border: 4px solid #0E8B8B; box-shadow: 0 5px 15px rgba(14, 139, 139, 0.2);">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f4f7; color: #333; margin: 0; padding: 10px; }
+  .profile-card { max-width: 650px; margin: 20px auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e1e1e1; }
+  
+  /* Header Section */
+  .header { background: #0a192f; padding: 40px 20px; text-align: center; color: #fff; }
+  .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #c5a059; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+  .name { font-size: 2.2em; font-weight: 700; letter-spacing: 1px; color: #c5a059; margin: 10px 0 5px 0; text-transform: uppercase; }
+  .tagline { font-size: 1.1em; color: #e0e0e0; font-weight: 300; margin-bottom: 20px; }
+  
+  /* Badges */
+  .badge-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .badge { background: rgba(197, 160, 89, 0.15); color: #c5a059; padding: 6px 14px; border-radius: 50px; font-size: 0.85em; font-weight: 600; border: 1px solid #c5a059; }
+
+  /* Body Content */
+  .content { padding: 30px 25px; }
+  h2 { color: #0a192f; border-bottom: 2px solid #c5a059; display: inline-block; padding-bottom: 5px; font-size: 1.3em; margin-bottom: 20px; text-transform: uppercase; }
+  p { line-height: 1.6; color: #444; }
+
+  /* Grid for Skills - Responsive */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+  @media (max-width: 500px) { .skills-grid { grid-template-columns: 1fr; } }
+  
+  .skill-box { background: #f9fafb; padding: 15px; border-radius: 12px; border-left: 4px solid #0a192f; }
+  .skill-box h4 { margin-top: 0; color: #c5a059; font-size: 0.95em; }
+  .skill-list { list-style: none; padding: 0; font-size: 0.9em; margin: 0; }
+  .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; }
+  .skill-list li::before { content: "•"; color: #c5a059; position: absolute; left: 0; font-weight: bold; }
+
+  /* Experience Section */
+  .exp-item { margin-bottom: 25px; padding-left: 15px; border-left: 1px solid #ddd; }
+  .exp-title { font-weight: 700; color: #0a192f; font-size: 1.1em; margin: 0; }
+  .exp-company { color: #c5a059; font-weight: 600; font-size: 0.9em; margin: 2px 0; }
+  .exp-desc { font-size: 0.95em; color: #666; }
+
+  /* Contact Footer */
+  .footer { background: #f0f2f5; padding: 30px 20px; text-align: center; }
+  .cta-btn { background: #0a192f; color: #c5a059; padding: 12px 25px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; margin-bottom: 20px; border: 1px solid #c5a059; }
+  .contact-info { font-size: 0.95em; color: #333; line-height: 2; }
+  .contact-info strong { color: #0a192f; }
+</style>
+</head>
+<body>
+
+<div class="profile-card">
+  <div class="header">
+    <img src="Taher.jpg" alt="Taher Husain" class="profile-img">
+    <div class="name">Taher Husain</div>
+    <div class="tagline">Premium Property Advisor | Entrepreneur</div>
+    <div class="badge-container">
+      <span class="badge">📍 Dubai, UAE</span>
+      <span class="badge">🇦🇪 Investor Visa</span>
+      <span class="badge">🚗 LMV Licensed</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2>Professional Profile</h2>
+    <p>
+      With over <strong>7 years of entrepreneurial success</strong> in Dubai, I bring a refined business acumen to the real estate sector. Having founded and managed international trading operations, I specialize in the art of the deal—combining <strong>strategic negotiation</strong> with a deep-rooted commitment to client trust.
+    </p>
+
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h4>COMMERCIAL EXPERTISE</h4>
+        <ul class="skill-list">
+          <li>Strategic Negotiation</li>
+          <li>Market Analysis</li>
+          <li>Investment Sourcing</li>
+          <li>Complex Transactions</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h4>CLIENT ADVOCACY</h4>
+        <ul class="skill-list">
+          <li>Relationship Management</li>
+          <li>Clear Communication</li>
+          <li>Problem Solving</li>
+          <li>Integrity-Driven Results</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Experience</h2>
+    
+    <div class="exp-item">
+      <p class="exp-title">Founder & Managing Director</p>
+      <p class="exp-company">Al Mubarak Al Tijarah FZ LLC | 2023 – Present</p>
+      <p class="exp-desc">Spearheading end-to-end business operations and wholesale trade, mastering the logistics of high-stakes Dubai commerce.</p>
+    </div>
+
+    <div class="exp-item">
+      <p class="exp-title">Leadership Portfolio</p>
+      <p class="exp-company">2016 – 2023</p>
+      <p class="exp-desc">Significant roles in Business Partnership and Administration at Al Marzaan and Anjuman E Najmi, focusing on customer satisfaction and organizational excellence.</p>
+    </div>
+
+    <div style="background: #0a192f; color: white; padding: 20px; border-radius: 12px; font-style: italic; text-align: center; font-size: 0.95em;">
+      "My commitment to community service defines my professional ethics: Empathy, Responsibility, and Impact."
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="mailto:tbetwala29@gmail.com" class="cta-btn">CONSULT WITH ME</a>
+    <div class="contact-info">
+      <strong>📞 Phone:</strong> +971 58 113 0453<br>
+      <strong>💬 WhatsApp:</strong> +971 52 179 0412<br>
+      <strong>✉️ Email:</strong> tbetwala29@gmail.com
+    </div>
+    <p style="font-size: 0.75em; color: #999; margin-top: 20px;">© 2026 | Professional Property Services</p>
+  </div>
 </div>
 
-<div align="center" style="margin-top: 20px;">
-  <h1 style="color: #D4AF37; font-family: Georgia, 'Times New Roman', serif; font-size: 2.8em; margin-bottom: 5px;">
-    Taher Husain
-  </h1>
-  <p style="color: #0E8B8B; font-size: 1.4em; font-weight: bold; margin: 5px 0;">
-    Building Trust in Dubai Real Estate
-  </p>
-  <p style="color: #5D5D5D; font-size: 1.1em;">
-    Entrepreneur | Client-Focused Advisor | Community Volunteer
----
-
-### 👋 **My Professional Journey**
-
-<div style="background-color: #F9F7F2; padding: 25px; border-radius: 10px; border-left: 5px solid #D4AF37;">
-  <p style="color: #333; font-size: 1.1em; line-height: 1.7;">
-    I am a dedicated professional with over <strong>7 years of success in business management, sales, and entrepreneurship in Dubai</strong>. My experience building and running my own import/export company has equipped me with core skills that are perfectly suited for real estate: <strong>understanding client needs, negotiating win-win agreements, and managing complex transactions with integrity</strong>.
-  </p>
-  <p style="color: #333; font-size: 1.1em; line-height: 1.7;">
-    I am now passionately applying this proven skill set to help individuals and families navigate the Dubai property market. I believe in clear communication, patient guidance, and providing exceptional value at every step.
-  </p>
-</div>
-
----
-
-### 🛠️ **My Skills & Value**
-
-<table width="100%">
-<tr>
-<td width="50%" style="vertical-align: top; padding-right: 15px;">
-
-**💼 Core Business Strengths**
-<div style="background: white; padding: 20px; border-radius: 8px; margin-top: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.05);">
-• <strong style="color: #0E8B8B;">Strategic Negotiation</strong><br>
-• <strong style="color: #0E8B8B;">Client Relationship Management</strong><br>
-• <strong style="color: #0E8B8B;">Business Development</strong><br>
-• <strong style="color: #0E8B8B;">Operations & Logistics</strong><br>
-• <strong style="color: #0E8B8B;">Market Analysis</strong>
-</div>
-
-</td>
-<td width="50%" style="vertical-align: top; padding-left: 15px;">
-
-**🏡 Bringing Value to Real Estate**
-<div style="background: white; padding: 20px; border-radius: 8px; margin-top: 10px; box-shadow: 0 3px 8px rgba(0,0,0,0.05);">
-• <strong style="color: #D4AF37;">Clear & Trustworthy Communication</strong><br>
-• <strong style="color: #D4AF37;">Entrepreneurial Problem-Solving</strong><br>
-• <strong style="color: #D4AF37;">Dedicated Client Advocacy</strong><br>
-• <strong style="color: #D4AF37;">Understanding of Dubai's Market</strong><br>
-• <strong style="color: #D4AF37;">Empathetic & Patient Approach</strong>
-</div>
-
-</td>
-</tr>
-</table>
-
----
-
-### 📈 **Career Experience**
-
-<div style="background: linear-gradient(to right, #FFFFFF, #F9F7F2); padding: 25px; border-radius: 10px; margin: 25px 0; border: 1px solid #EAEAEA;">
-  <h3 style="color: #0E8B8B; margin-top: 0;">Founder & Managing Director</h3>
-  <p><strong>Al Mubarak Al Tijarah FZ LLC</strong> | <em>2023 – Present</em></p>
-  <p>Founded a fresh fruits import/export and wholesale business, managing all operations from sourcing to client delivery. This entrepreneurial experience is my foundation for client-focused service in real estate.</p>
-
-  <h3 style="color: #0E8B8B; margin-top: 25px;">Previous Leadership Roles</h3>
-  <p><strong>Business Partner</strong> at Al Marzaan General Trading (2022-2023)<br>
-  <strong>Manager</strong> at Cravers Kitchen (2021-2022)<br>
-  <strong>Administrator</strong> at Anjuman E Najmi (2016-2021)</p>
-  <p>These roles built my expertise in sales strategy, customer satisfaction, and meticulous organization.</p>
-</div>
-
----
-
-### ❤️ **Beyond Business**
-
-<div style="text-align: center; padding: 20px; background-color: #F0F5F5; border-radius: 10px; margin: 25px 0;">
-  <p style="color: #2E5E5E; font-style: italic; font-size: 1.1em;">
-    "I am an active volunteer in community social services. This commitment to service shapes my core values: <strong>empathy, responsibility, and a genuine desire to help others</strong>—principles I carry into all my professional interactions."
-  </p>
-</div>
-
----
-
-### 📬 **Let's Connect**
-
-<div align="center" style="background-color: #0E8B8B; color: white; padding: 25px; border-radius: 10px; margin-top: 30px;">
-  <h3 style="color: white; margin-top: 0;">Get in Touch</h3>
-  <table style="color: white; margin: 0 auto;">
-    <tr><td><strong>📞 Phone:</strong></td><td> +971 58 113 0453</td></tr>
-    <tr><td><strong>💬 WhatsApp:</strong></td><td> +971 52 179 0412</td></tr>
-    <tr><td><strong>✉️ Email:</strong></td><td> tbetwala29@gmail.com</td></tr>
-  </table>
-  <p style="margin-top: 20px; color: #F5F1E6;"><em>Based in Dubai and ready to assist with your real estate journey.</em></p>
-</div>
-
----
-<div align="center" style="margin-top: 30px; color: #888; font-size: 0.9em;">
-  <p>Last Updated: 2026 | This profile is a living document of my professional path.</p>
-</div>
+</body>
+</html>
