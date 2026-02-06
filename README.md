@@ -640,8 +640,8 @@
                     </div>
                     <div class="profile-text">
                         <h1 class="name">Taher Betwala</h1>
-                        <div class="title">Real Estate Sales Executive Candidate</div>
-                        <div class="visa-badge">Visa Status: Investor</div>
+                        <div class="title">Real Estate Sales Executive</div>
+                        <div class="visa-badge">Visa Status: Partner</div>
                         
                         <div class="contact-info">
                             <div class="contact-item">
@@ -697,7 +697,7 @@
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-users"></i> Relationship Management</h3>
-                    <p>Built a loyal client base through trust and transparency with long-term relationship focus.</p>
+                    <p>Built a loyal client base through trust and transparency with a long-term relationship focus.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-map-marked-alt"></i> Local Market Knowledge</h3>
@@ -705,7 +705,7 @@
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-cogs"></i> Operational Excellence</h3>
-                    <p>Full-cycle business management, from sourcing to final delivery with systematic approach.</p>
+                    <p>Full-cycle business management, from sourcing to final delivery, with a systematic approach.</p>
                 </div>
                 <div class="competency-item">
                     <h3><i class="fas fa-hands-helping"></i> Community Leadership</h3>
@@ -780,7 +780,7 @@
             <div class="community-section">
                 <div class="community-text">
                     <h3>Active Community Social Worker</h3>
-                    <p>Dedicated to supporting community initiatives and fostering social welfare. This role has allowed me to build a vast network of trust-based relationships across Dubai, providing a unique advantage in identifying potential real estate leads and understanding family housing needs.</p>
+                    <p>Dedicated to supporting community initiatives and fostering social welfare. This role has allowed me to build a vast network of trust-based relationships across Dubai.</p>
                 </div>
             </div>
         </section>
