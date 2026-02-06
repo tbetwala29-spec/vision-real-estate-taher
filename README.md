@@ -1,118 +1,281 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f4f4f7; color: #333; margin: 0; padding: 10px; }
-  .profile-card { max-width: 650px; margin: 20px auto; background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #e1e1e1; }
-  
-  /* Header Section */
-  .header { background: #0a192f; padding: 40px 20px; text-align: center; color: #fff; }
-  .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #c5a059; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-  .name { font-size: 2.2em; font-weight: 700; letter-spacing: 1px; color: #c5a059; margin: 10px 0 5px 0; text-transform: uppercase; }
-  .tagline { font-size: 1.1em; color: #e0e0e0; font-weight: 300; margin-bottom: 20px; }
-  
-  /* Badges */
-  .badge-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-  .badge { background: rgba(197, 160, 89, 0.15); color: #c5a059; padding: 6px 14px; border-radius: 50px; font-size: 0.85em; font-weight: 600; border: 1px solid #c5a059; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taher Husain | Real Estate Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A059;
+            --navy: #0A192F;
+            --slate: #4A5568;
+            --off-white: #F8F9FA;
+            --white: #FFFFFF;
+        }
 
-  /* Body Content */
-  .content { padding: 30px 25px; }
-  h2 { color: #0a192f; border-bottom: 2px solid #c5a059; display: inline-block; padding-bottom: 5px; font-size: 1.3em; margin-bottom: 20px; text-transform: uppercase; }
-  p { line-height: 1.6; color: #444; }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #E2E8F0; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--navy); 
+        }
 
-  /* Grid for Skills - Responsive */
-  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-  @media (max-width: 500px) { .skills-grid { grid-template-columns: 1fr; } }
-  
-  .skill-box { background: #f9fafb; padding: 15px; border-radius: 12px; border-left: 4px solid #0a192f; }
-  .skill-box h4 { margin-top: 0; color: #c5a059; font-size: 0.95em; }
-  .skill-list { list-style: none; padding: 0; font-size: 0.9em; margin: 0; }
-  .skill-list li { margin-bottom: 8px; position: relative; padding-left: 15px; }
-  .skill-list li::before { content: "•"; color: #c5a059; position: absolute; left: 0; font-weight: bold; }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
 
-  /* Experience Section */
-  .exp-item { margin-bottom: 25px; padding-left: 15px; border-left: 1px solid #ddd; }
-  .exp-title { font-weight: 700; color: #0a192f; font-size: 1.1em; margin: 0; }
-  .exp-company { color: #c5a059; font-weight: 600; font-size: 0.9em; margin: 2px 0; }
-  .exp-desc { font-size: 0.95em; color: #666; }
+        /* --- Header Section --- */
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, #162C4E 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
 
-  /* Contact Footer */
-  .footer { background: #f0f2f5; padding: 30px 20px; text-align: center; }
-  .cta-btn { background: #0a192f; color: #c5a059; padding: 12px 25px; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: bold; margin-bottom: 20px; border: 1px solid #c5a059; }
-  .contact-info { font-size: 0.95em; color: #333; line-height: 2; }
-  .contact-info strong { color: #0a192f; }
-</style>
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid var(--gold);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            /* Updated image path to your GitHub name */
+            background-image: url('Taher.jpg');
+            background-size: cover;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 1px;
+            color: var(--gold);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .badge-bar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(197, 160, 89, 0.2);
+            border: 1px solid var(--gold);
+            padding: 6px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold);
+        }
+
+        /* --- Content Sections --- */
+        .section { padding: 40px 30px; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 25px;
+            color: var(--navy);
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--slate);
+        }
+
+        /* --- Skills Grid --- */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--off-white);
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid var(--gold);
+        }
+
+        .card h3 { font-size: 1rem; margin-top: 0; color: var(--navy); text-transform: uppercase; }
+        .card ul { padding-left: 18px; margin-bottom: 0; color: var(--slate); font-size: 0.9rem; }
+        .card li { margin-bottom: 8px; }
+
+        /* --- Experience Timeline --- */
+        .timeline-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid #E2E8F0;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .role { font-weight: 700; font-size: 1.1rem; margin: 0; }
+        .company { color: var(--gold); font-weight: 600; font-size: 0.95rem; margin: 4px 0; }
+        .desc { font-size: 0.9rem; color: var(--slate); line-height: 1.5; }
+
+        /* --- Footer & Contact --- */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: var(--white);
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(197,160,89,0.3);
+            transition: 0.3s;
+            display: block;
+        }
+
+        .contact-link:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2.2rem; }
+            .section { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="profile-card">
-  <div class="header">
-    <img src="Taher.jpg" alt="Taher Husain" class="profile-img">
-    <div class="name">Taher Husain</div>
-    <div class="tagline">Premium Property Advisor | Entrepreneur</div>
-    <div class="badge-container">
-      <span class="badge">📍 Dubai, UAE</span>
-      <span class="badge">🇦🇪 Investor Visa</span>
-      <span class="badge">🚗 LMV Licensed</span>
-    </div>
-  </div>
+<div class="container">
+    <header class="header">
+        <div style="display: flex; justify-content: center;">
+            <div class="profile-img"></div>
+        </div>
+        <h1>Taher Husain</h1>
+        <p>Premium Real Estate Advisor | Visionary Entrepreneur</p>
+        <div class="badge-bar">
+            <span class="badge">🇦🇪 Investor Visa</span>
+            <span class="badge">📍 Dubai Resident</span>
+            <span class="badge">🚗 LMV Licensed</span>
+        </div>
+    </header>
 
-  <div class="content">
-    <h2>Professional Profile</h2>
-    <p>
-      With over <strong>7 years of entrepreneurial success</strong> in Dubai, I bring a refined business acumen to the real estate sector. Having founded and managed international trading operations, I specialize in the art of the deal—combining <strong>strategic negotiation</strong> with a deep-rooted commitment to client trust.
-    </p>
+    <section class="section">
+        <h2 class="section-title">Elevating Your Dubai Experience</h2>
+        <p class="intro-text">
+            Transitioning from 7+ years of successful business ownership into the Dubai real estate market, I bring a unique <strong>entrepreneurial edge</strong> to property advisory. My philosophy is simple: I don't just sell property; I build partnerships based on <strong>transparency, strategic insight, and high-level negotiation</strong>. Whether you are looking for a luxury home or a high-yield investment, I apply the same rigor that made my import/export ventures successful to ensure your assets are protected and your goals are met.
+        </p>
+    </section>
 
-    <div class="skills-grid">
-      <div class="skill-box">
-        <h4>COMMERCIAL EXPERTISE</h4>
-        <ul class="skill-list">
-          <li>Strategic Negotiation</li>
-          <li>Market Analysis</li>
-          <li>Investment Sourcing</li>
-          <li>Complex Transactions</li>
-        </ul>
-      </div>
-      <div class="skill-box">
-        <h4>CLIENT ADVOCACY</h4>
-        <ul class="skill-list">
-          <li>Relationship Management</li>
-          <li>Clear Communication</li>
-          <li>Problem Solving</li>
-          <li>Integrity-Driven Results</li>
-        </ul>
-      </div>
-    </div>
+    <section class="section" style="background-color: #fcfcfc;">
+        <h2 class="section-title">Core Expertise</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🏠 Real Estate Strategy</h3>
+                <ul>
+                    <li>Dynamic Market Analysis</li>
+                    <li>Property Advisory & Valuation</li>
+                    <li>Bespoke Viewing Experiences</li>
+                    <li>Seamless Documentation Management</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🤝 Business Acumen</h3>
+                <ul>
+                    <li>Strategic Win-Win Negotiation</li>
+                    <li>Global Client Relations</li>
+                    <li>Complex Deal Structuring</li>
+                    <li>Investment Risk Assessment</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <h2>Experience</h2>
-    
-    <div class="exp-item">
-      <p class="exp-title">Founder & Managing Director</p>
-      <p class="exp-company">Al Mubarak Al Tijarah FZ LLC | 2023 – Present</p>
-      <p class="exp-desc">Spearheading end-to-end business operations and wholesale trade, mastering the logistics of high-stakes Dubai commerce.</p>
-    </div>
+    <section class="section">
+        <h2 class="section-title">Professional Journey</h2>
+        
+        <div class="timeline-item">
+            <p class="role">Founder & Managing Director</p>
+            <p class="company">Al Mubarak Al Tijarah FZ LLC | 2023 – Present</p>
+            <p class="desc">Spearheading a thriving international trade enterprise. This experience serves as my foundation for managing high-value transactions and understanding the speed of Dubai's economy.</p>
+        </div>
 
-    <div class="exp-item">
-      <p class="exp-title">Leadership Portfolio</p>
-      <p class="exp-company">2016 – 2023</p>
-      <p class="exp-desc">Significant roles in Business Partnership and Administration at Al Marzaan and Anjuman E Najmi, focusing on customer satisfaction and organizational excellence.</p>
-    </div>
+        <div class="timeline-item">
+            <p class="role">Business Partner</p>
+            <p class="company">Al Marzaan General Trading | 2022 – 2023</p>
+            <p class="desc">Managed high-stakes B2B negotiations and long-term business partnerships across the UAE.</p>
+        </div>
 
-    <div style="background: #0a192f; color: white; padding: 20px; border-radius: 12px; font-style: italic; text-align: center; font-size: 0.95em;">
-      "My commitment to community service defines my professional ethics: Empathy, Responsibility, and Impact."
-    </div>
-  </div>
+        <div class="timeline-item">
+            <p class="role">Operational Leadership</p>
+            <p class="company">Previous Roles (2016 – 2022)</p>
+            <p class="desc">Leadership roles at Cravers Kitchen and Anjuman E Najmi, focusing on organizational excellence and client satisfaction.</p>
+        </div>
+    </section>
 
-  <div class="footer">
-    <a href="mailto:tbetwala29@gmail.com" class="cta-btn">CONSULT WITH ME</a>
-    <div class="contact-info">
-      <strong>📞 Phone:</strong> +971 58 113 0453<br>
-      <strong>💬 WhatsApp:</strong> +971 52 179 0412<br>
-      <strong>✉️ Email:</strong> tbetwala29@gmail.com
-    </div>
-    <p style="font-size: 0.75em; color: #999; margin-top: 20px;">© 2026 | Professional Property Services</p>
-  </div>
+    <section class="section" style="background: #F8F9FA; text-align: center;">
+        <p style="font-style: italic; color: var(--slate);">
+            "Beyond business, my heart lies in community service. This dedication to helping others ensures that my real estate approach is always client-first, ethical, and empathetic."
+        </p>
+        <div style="margin-top: 20px; font-size: 0.85rem; color: var(--slate);">
+            <strong>Languages:</strong> English, Hindi, Urdu | <strong>Nationality:</strong> Indian
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2 style="font-family: 'Playfair Display', serif; color: var(--gold); margin-bottom: 10px;">Let’s Connect</h2>
+        <p>Ready to start your property journey in Dubai?</p>
+        
+        <div class="contact-grid">
+            <a href="https://wa.me/971521790412" class="contact-link">💬 WhatsApp</a>
+            <a href="tel:+971581130453" class="contact-link">📞 Call Me</a>
+            <a href="mailto:tbetwala29@gmail.com" class="contact-link">✉️ Email Me</a>
+        </div>
+
+        <p style="font-size: 0.7rem; margin-top: 40px; opacity: 0.6;">
+            Last Updated 2026 | Professional Digital Profile
+        </p>
+    </footer>
 </div>
 
 </body>
